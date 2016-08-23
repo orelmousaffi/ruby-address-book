@@ -1,0 +1,13 @@
+<h1>Contact has been created successfully!</h1>
+
+<h5>Welcome <%= @contact.fname %>!</h5>
+
+<%= link_to "Edit Contact", edit_contact_path %>
+
+<%= link_to "Delete Contact",
+  contact_path,
+  method: :delete,
+  data: {
+    confirm: "Are you sure? This contact will be deleted!"
+  }
+%>
