@@ -8,8 +8,27 @@
   </div>
 
   <div class="col-md-6">
-    <h4><%= @contact.fname + " " + @contact.lname %></h4>
-    <h5><%= @contact.phone%></h5>
+    <% if @address.id %>
+      <h4><%= @address.street_name %></h4>
+      <h5><%= @address.city %></h5>
+      <h5><%= @address.province %></h5>
+      <h5><%= @address.postal_code %></h5>
+      <br/>
+      <%= link_to "Edit Address", edit_address_path, class: "btn btn-default" %>
+
+      <%= link_to "Delete Address",
+        address_path,
+        method: :delete,
+        data: {
+          confirm: "Are you sure? This address will be deleted!"
+        },
+        class: "btn btn-warning"
+      %>
+      
+    <% else %>
+      <%= link_to "Add Address", new_address_path, class: "btn btn-success" %>
+    <% end %>
+
   </div>
 </div>
 

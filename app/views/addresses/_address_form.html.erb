@@ -1,0 +1,25 @@
+<%= form_for @address, :url => {:action => 'create', :id => @contact.id} do |form_elem| %>
+
+  <%= form_elem.text_field :street_name,
+    placeholder: "Street Name...",
+    class: "form-control",
+    required: "required" %><br/>
+
+  <%= form_elem.text_field :city,
+    placeholder: "City...",
+    class: "form-control",
+    required: "required" %><br/>
+
+  <%= form_elem.text_field :province,
+    placeholder: "Province...",
+    class: "form-control",
+    required: "required" %><br/>
+
+  <%= form_elem.text_field :postal_code,
+    placeholder: "Postal Code...",
+    class: "form-control",
+    required: "required" %><br/>
+
+  <%= form_elem.submit "Submit", :class => "btn btn-success" %>
+
+<% end %>

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   resources :contacts
+
+  resources :addresses, :except => [:new, :create]
+  get 'addresses/new/:id' => 'addresses#new', as: :new_address
+  post 'addresses/:id' => 'addresses#create'
+
   root "contacts#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

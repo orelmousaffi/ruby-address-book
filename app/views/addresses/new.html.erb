@@ -1,0 +1,16 @@
+<h2> Add Address to Contact</h2>
+<hr/>
+
+<div class="row">
+  <div class="col-md-4">
+    <h4><%= @contact.fname + " " + @contact.lname %></h4>
+    <h5><%= @contact.phone%></h5>
+  </div>
+
+  <div class="col-md-8">
+    <p>Please fill out the form below to add an address.</p>
+    <br/>
+
+    <%= render "address_form" %>
+  </div>
+</div>

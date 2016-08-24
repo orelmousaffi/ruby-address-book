@@ -1,0 +1,13 @@
+<h2>Edit Address Information</h2>
+<hr/>
+
+<div class="row">
+  <div class="col-md-6">
+    <h4><%= @contact.fname + " " + @contact.lname %></h4>
+    <h5><%= @contact.phone%></h5>
+  </div>
+
+  <div class="col-md-6">
+    <%= render "address_form" %>
+  </div>
+</div>
