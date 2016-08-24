@@ -1,6 +1,38 @@
-<h1> All Contacts </h1>
-<ol>
-  <% @contacts.each do |contact| %>
-    <li><%= link_to contact.fname,  contact%></li>
-  <% end %>
-</ol>
+<h2> All Contacts </h2>
+<hr/>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone #</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%
+        if @contacts.length > 0
+          #Loop through all existing contacts
+          @contacts.each do |contact|
+      %>
+        <tr>
+          <td>
+            <%=
+              #Set a link to the name of each contact
+              link_to contact.fname, contact
+            %>
+          </td>
+          <td><%= contact.lname %></td>
+          <td><%= contact.phone %></td>
+        </tr>
+      <% end
+        else %>
+        <tr>
+          <td colspan="3" style="text-align: center;">There where no contacts found!</td>
+        </tr>
+      <%end %>
+    </tbody>
+</table>
+<br/>
+
+<%= link_to "Create Contact", new_contact_path, class: "btn btn-primary", role: "button"%>

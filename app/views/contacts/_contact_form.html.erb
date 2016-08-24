@@ -1,0 +1,19 @@
+<%= form_for @contact do |form_elem| %>
+
+  <%= form_elem.text_field :fname,
+    placeholder: "First Name...",
+    class: "form-control",
+    required: "required" %><br/>
+
+  <%= form_elem.text_field :lname,
+    placeholder: "Last Name...",
+    class: "form-control",
+    required: "required" %><br/>
+
+  <%= form_elem.text_field :phone,
+    placeholder: "Phone Number...",
+    class: "form-control",
+    required: "required" %><br/>
+
+  <%= form_elem.submit "Submit", :class => "btn btn-success" %>
+<% end %>

@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>App</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>My Ruby Address Book</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+    <!-- Bootstrap Core CSS -->
+    <%= stylesheet_link_tag 'bootstrap.min' %>
+  </head>
+  <body>
+    <%= render 'layouts/navigation' %>
 
-</body>
+    <div id="mainContent" class="container">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
+
+  </body>
+
+  <!-- jQuery Version 1.11.1 -->
+  <%= javascript_include_tag 'jquery' %>
+
+  <!-- Bootstrap Core JavaScript -->
+  <%= javascript_include_tag 'bootstrap.min' %>
 </html>

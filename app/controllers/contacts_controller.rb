@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     if @contact.save
-      redirect_to @contact
+      redirect_to @contact  
     else
       render 'new'
     end
@@ -45,6 +45,19 @@ class ContactsController < ApplicationController
   end
 
   def contact_params
-    params.require(:contact).permit(:fname)
+    params.require(:contact).permit(
+      :fname,
+      :lname,
+      :phone
+    )
+  end
+
+  def address_params
+    params.require(:address).permit(
+      :street_name,
+      :city,
+      :province,
+      :postal_code
+    )
   end
 end

@@ -1,0 +1,8 @@
+<%= form_for @address do |form_elem| %>
+  <%= form_elem.text_field :street_name, placeholder: "Street Name..." %><br/>
+  <%= form_elem.text_field :city, placeholder: "City..." %><br/>
+  <%= form_elem.text_field :province, placeholder: "Proviince..." %><br/>
+  <%= form_elem.text_field :postal_code, placeholder: "..." %><br/>
+  <br/>
+  <%= form_elem.submit %>
+<% end %>
