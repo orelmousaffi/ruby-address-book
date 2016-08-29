@@ -5,10 +5,17 @@ application up and running.
 
 Things you may want to cover:
 
+This project is meant to convy my ability to learn a new stack such as Ruby on Rails and to show my ability to relate my current
+knowlege of previous systems. Please be aware that with the limited time I had to complete this example, there is little to no
+validation implemneted in the intent of keeping focus on backend structure. All projects professionally developed feature thee
+layers of validation: Database contraints, controller logic for data integrity, and front-end validation with message prompts to
+help the user.
+
 * Ruby version
 ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
 
 * System dependencies
+Rails 4.2.6
 
 * Configuration
 
