@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'addresses/new/:id' => 'addresses#new', as: :new_address
   post 'addresses/:id' => 'addresses#create'
 
+  get '*not_found' => 'errors#not_found', as: :not_found
+
   root "contacts#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
